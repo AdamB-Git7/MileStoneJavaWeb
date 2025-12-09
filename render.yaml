@@ -11,8 +11,8 @@ services:
   - type: static
     name: fragrance-frontend
     rootDir: Frontend
-    buildCommand: npm ci && npm run build
-    staticPublishPath: dist
+    buildCommand: cd Frontend && npm ci && npm run build
+    staticPublishPath: Frontend/dist
     envVars:
       - key: VITE_API_URL
         fromService:
